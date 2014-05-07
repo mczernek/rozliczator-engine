@@ -1,6 +1,7 @@
 package pl.kap11.rozliczator.engine;
 
 import pl.kap11.rozliczator.engine.data.Settler;
+import pl.kap11.rozliczator.engine.data.product.AllEqualProduct;
 
 public class Payment {
 	private Settler settler;
@@ -17,7 +18,7 @@ public class Payment {
 	
 	@Override
 	public boolean equals(Object o){
-		if(o instanceof Product){
+		if(o instanceof AllEqualProduct){
 			Payment toCompare = (Payment)o;
 			return toCompare.settler.equals(settler) && toCompare.value == value;
 		}else{
